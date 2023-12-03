@@ -1,0 +1,2 @@
+def countBytes(path):
+    pass
