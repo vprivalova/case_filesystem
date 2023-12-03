@@ -1,5 +1,5 @@
 import os
-import accept_Command
+import accept_command
 import run_command
 
 MENU = '''
@@ -19,8 +19,8 @@ def main():
         path = os.getcwd()
         print(path)
         print(MENU)
-        command = acceptCommand.aссeptСommand()
-        runCommand.runCommand(command)
+        command = accept_command.aссeptСommand()
+        run_command.runCommand(command)
         if command == '7':
             print('Работа программы завершена.')
             break
