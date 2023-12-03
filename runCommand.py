@@ -8,7 +8,8 @@ def runCommand(command):
         print(os.listdir(path="."))
 
     if command == '2':
-        pass
+        print(os.chdir(path=".."))
+
     if command == '3':
         pass
     if command == '4':
