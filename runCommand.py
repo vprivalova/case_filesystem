@@ -1,4 +1,5 @@
 import os
+import moveUp
 
 
 def runCommand(command):
@@ -8,7 +9,7 @@ def runCommand(command):
         print(os.listdir(path="."))
 
     if command == '2':
-        print(os.chdir(path=".."))
+        print(moveUp.moveUp())
 
     if command == '3':
         pass

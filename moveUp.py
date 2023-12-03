@@ -1,5 +1,8 @@
+import os
+
+
 def moveUP():
-    pass
+    return os.chdir(path="..")
 
 
 if __name__ == '__main__':
