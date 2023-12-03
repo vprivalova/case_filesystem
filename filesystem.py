@@ -1,3 +1,10 @@
+'''
+Team:
+Nizovtseva Anastasia 86
+Privalova Viktoria 91
+'''
+
+
 import os
 import accept_command
 import run_command
