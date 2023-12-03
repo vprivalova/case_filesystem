@@ -1,5 +1,6 @@
 import os
 
+import count_files
 import move_down
 import move_up
 
@@ -16,8 +17,10 @@ def runCommand(command):
     if command == '3':
         currentDir = input('Введите имя подкаталога: ')
         print(move_down.moveDown(currentDir))
+
     if command == '4':
-        pass
+        print(count_files.countFiles(path))
+
     if command == '5':
         pass
     if command == '6':
