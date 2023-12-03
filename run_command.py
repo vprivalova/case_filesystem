@@ -1,5 +1,5 @@
 import os
-
+import count_bytes
 import count_files
 import move_down
 import move_up
@@ -22,10 +22,9 @@ def runCommand(command):
         print(count_files.countFiles(path))
 
     if command == '5':
-        pass
+        print(count_bytes.countBytes(path))
+
     if command == '6':
-        pass
-    if command == '7':
         pass
 
 
