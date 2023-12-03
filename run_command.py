@@ -3,19 +3,21 @@ import count_bytes
 import count_files
 import move_down
 import move_up
+import ru_local as ru
+import find_files
 
 
 def runCommand(command):
     path = os.getcwd()
 
     if command == '1':
-        print(os.listdir(path="."))
+        print(os.listdir(path))
 
     if command == '2':
         print(move_up.moveUp())
 
     if command == '3':
-        currentDir = input('Введите имя подкаталога: ')
+        currentDir = input(ru.SUBDIRECTORY)
         print(move_down.moveDown(currentDir))
 
     if command == '4':
