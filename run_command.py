@@ -1,5 +1,7 @@
 import os
-import moveUp
+
+import move_down
+import move_up
 
 
 def runCommand(command):
@@ -9,10 +11,11 @@ def runCommand(command):
         print(os.listdir(path="."))
 
     if command == '2':
-        print(moveUp.moveUp())
+        print(move_up.moveUp())
 
     if command == '3':
-        pass
+        currentDir = input('Введите имя подкаталога: ')
+        print(move_down.moveDown(currentDir))
     if command == '4':
         pass
     if command == '5':

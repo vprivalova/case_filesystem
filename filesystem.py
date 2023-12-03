@@ -1,6 +1,6 @@
 import os
-import acceptCommand
-import runCommand
+import accept_Command
+import run_command
 
 MENU = '''
     Меню:
