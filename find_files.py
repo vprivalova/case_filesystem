@@ -1,4 +1,5 @@
 import os
+import ru_local as ru
 
 
 def findFiles(target, path):
@@ -10,7 +11,7 @@ def findFiles(target, path):
             if os.path.isfile(path2) is True:
                 list_paths.append(path2)
     if len(list_paths) == 0:
-        return 'Файла содержащего такое название нет.'
+        return ru.NO_FILE
     else:
         return list_paths
 

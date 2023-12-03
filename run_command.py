@@ -28,7 +28,7 @@ def runCommand(command):
         print(count_bytes.countBytes(path))
 
     if command == '6':
-        target = input('Введите имя файла: ')
+        target = input(ru.INPUT_NAME)
         result = find_files.findFiles(target, path)
         print(*result, sep='\n')
 

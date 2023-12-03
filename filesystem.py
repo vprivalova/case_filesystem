@@ -7,7 +7,7 @@ import ru_local as ru
 def main():
     while True:
         path = os.getcwd()
-        print(path)
+        print(ru.PATH, path)
         print(ru.MENU)
         command = accept_command.aссeptСommand()
         run_command.runCommand(command)
