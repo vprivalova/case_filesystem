@@ -11,9 +11,8 @@ def findFiles(target, path):
             if os.path.isfile(path2) is True:
                 list_paths.append(path2)
     if len(list_paths) == 0:
-        return ru.NO_FILE
-    else:
-        return list_paths
+        list_paths.append(ru.NO_FILE)
+    return list_paths
 
 
 if __name__ == '__main__':

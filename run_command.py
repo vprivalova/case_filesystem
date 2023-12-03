@@ -30,7 +30,8 @@ def runCommand(command):
     if command == '6':
         target = input(ru.INPUT_NAME)
         result = find_files.findFiles(target, path)
-        print(*result, sep='\n')
+        for elem in result:
+            print(elem)
 
 
 
