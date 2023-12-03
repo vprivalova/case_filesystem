@@ -16,13 +16,15 @@ MENU = '''
 
 def main():
     while True:
-        print(os.getcwd())
+        path = os.getcwd()
+        print(path)
         print(MENU)
-        command = acceptCommand.acceptCommand()
+        command = acceptCommand.aссeptСommand()
         runCommand.runCommand(command)
         if command == '7':
             print('Работа программы завершена.')
             break
 
-    if __name__ == '__main__':
-        main()
+
+if __name__ == '__main__':
+    main()

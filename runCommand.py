@@ -1,6 +1,12 @@
+import os
+
+
 def runCommand(command):
+    path = os.getcwd()
+
     if command == '1':
-        pass
+        print(os.listdir(path="."))
+
     if command == '2':
         pass
     if command == '3':
@@ -14,3 +20,6 @@ def runCommand(command):
     if command == '7':
         pass
 
+
+if __name__ == '__main__':
+    runCommand()
