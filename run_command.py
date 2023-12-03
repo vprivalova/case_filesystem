@@ -1,6 +1,7 @@
 import os
 import count_bytes
 import count_files
+import find_files
 import move_down
 import move_up
 import ru_local as ru
@@ -27,7 +28,10 @@ def runCommand(command):
         print(count_bytes.countBytes(path))
 
     if command == '6':
-        pass
+        target = input('Введите имя файла: ')
+        result = find_files.findFiles(target, path)
+        print(*result, sep='\n')
+
 
 
 if __name__ == '__main__':
