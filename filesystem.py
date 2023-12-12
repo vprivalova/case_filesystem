@@ -1,8 +1,8 @@
-'''
+"""
 Team:
 Nizovtseva Anastasia 86
 Privalova Viktoria 91
-'''
+"""
 
 
 import os
@@ -10,6 +10,12 @@ import ru_local as ru
 
 
 def main():
+    """
+    The function displays the path to the current directory,
+    the menu and calls the command request and execution function.
+    :return: None
+    """
+
     while True:
         path = os.getcwd()
         print(ru.PATH, path)
@@ -22,6 +28,13 @@ def main():
 
 
 def aссeptСommand():
+    """
+    The function inquires the number of the command.
+    In case of incorrect entry, the function outputs an error message and
+    continues requesting the number until the correct entry is done.
+    :return: apropriate selected command number
+    """
+
     numbers_point = ["1", "2", "3", "4", "5", "6", "7"]
     command = input(ru.CHOICE)
     while command not in numbers_point:
@@ -30,19 +43,37 @@ def aссeptСommand():
 
 
 def moveUp():
-    return os.chdir(path="..")
+    """
+    The function makes the parent directory current.
+    :return: None
+    """
+    os.chdir(path="..")
 
 
 def moveDown(currentDir):
+    """
+    The function makes the currentDir directory the current directory.
+    If the value of the variable is incorrect,
+    it prints an error message and makes a request for a new value of the variable.
+    :param currentDir: directory
+    :return: None
+    """
+
     path = os.getcwd()
     catalogs = os.listdir(path)
     while currentDir not in catalogs:
         currentDir = input(ru.SUBDIRECTORY_AGAIN)
     new_catalog = path + "\\" + currentDir
-    return os.chdir(new_catalog)
+    os.chdir(new_catalog)
 
 
 def countBytes(path):
+    """
+    The function calculates the total size (in bytes) of all files in the given directory.
+    :param path: iven directory
+    :return: total number of bytes
+    """
+
     overall_bytes = 0
     current_directory = os.listdir(path)
     for elem in current_directory:
@@ -55,6 +86,13 @@ def countBytes(path):
 
 
 def findFiles(target, path):
+    """
+    The function generates a list of file paths from all 'path' subdirectories whose name contains 'target'.
+    :param target: string
+    :param path: directory
+    :return: list of file paths
+    """
+
     current_directory = os.listdir(path)
     list_paths = []
     for elem in current_directory:
@@ -68,6 +106,12 @@ def findFiles(target, path):
 
 
 def countFiles(path):
+    """
+    The function counts the number of files in the given directory.
+    :param path: given directory
+    :return: number of files
+    """
+
     files = 0
     current_directory = os.listdir(path)
     for elem in current_directory:
@@ -80,17 +124,23 @@ def countFiles(path):
 
 
 def runCommand(command):
+    """
+    The function determines by the command number which command should be executed and calls it.
+    :param command: number of command to be done
+    :return: None
+    """
+
     path = os.getcwd()
 
     if command == '1':
         print(os.listdir(path))
 
     if command == '2':
-        print(moveUp())
+        moveUp()
 
     if command == '3':
         currentDir = input(ru.SUBDIRECTORY)
-        print(moveDown(currentDir))
+        moveDown(currentDir)
 
     if command == '4':
         print(countFiles(path))
